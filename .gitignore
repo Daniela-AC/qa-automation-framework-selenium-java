@@ -1,9 +1,14 @@
+# IntelliJ
 .idea/
 *.iml
-target/
-build/
-out/
+
+# Build
+/build/
+/out/
+
+# Gradle
 .gradle/
-.classpath
-.project
-.settings/
+
+# OS
+.DS_Store
+Thumbs.db
