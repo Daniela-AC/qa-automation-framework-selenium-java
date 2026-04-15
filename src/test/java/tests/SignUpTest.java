@@ -2,6 +2,7 @@ package tests;
 
 import base.BaseTest;
 import com.test.automationexercise.pages.AccountCreatedPage;
+import com.test.automationexercise.utils.data.TestCredentials;
 import com.test.automationexercise.utils.data.TestDataFactory;
 import com.test.automationexercise.utils.data.UserData;
 import org.junit.jupiter.api.Assertions;
@@ -29,8 +30,9 @@ public class SignUpTest extends BaseTest {
     @Test
     public void testCreateAccount() {
         UserData userData = TestDataFactory.createValidUser();
+
         homePage.goToLoginPage();
-        login.startSigningUp("Prueba", "prueba859@prueba.com");
+        login.startSigningUp(userData.firstName, userData.email);
         informationPage.fillInAccountInformation(userData);
         informationPage.fillInAddressInformation(userData);
         informationPage.clickCreateAccountButton();
@@ -40,7 +42,7 @@ public class SignUpTest extends BaseTest {
     @Test
     public void testSignUpWithExistingEmail() {
         homePage.goToLoginPage();
-        login.startSigningUp("Prueba", "prueba859@prueba.com");
+        login.startSigningUp(TestCredentials.NAME, TestCredentials.VALID_EMAIL);
         Assertions.assertEquals("Email Address already exist!", login.getEmailExistMessage());
     }
 }

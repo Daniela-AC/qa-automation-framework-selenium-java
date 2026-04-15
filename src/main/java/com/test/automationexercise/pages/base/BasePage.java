@@ -11,7 +11,7 @@ public class BasePage {
     protected WebDriver driver;
     protected WaitUtils wait;
 
-    public BasePage(WebDriver driver) {
+    protected BasePage(WebDriver driver) {
         this.driver = driver;
         wait = new WaitUtils(driver);
     }

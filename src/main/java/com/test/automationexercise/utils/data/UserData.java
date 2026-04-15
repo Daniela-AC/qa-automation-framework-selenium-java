@@ -14,4 +14,5 @@ public class UserData {
     public String city;
     public String zipcode;
     public String mobileNumber;
+    public String email;
 }

@@ -25,6 +25,7 @@ public class TestDataFactory {
         userData.state = faker.address().state();
         userData.zipcode = faker.address().zipCode();
         userData.mobileNumber = faker.phoneNumber().cellPhone();
+        userData.email = faker.internet().emailAddress();
 
         return userData;
     }

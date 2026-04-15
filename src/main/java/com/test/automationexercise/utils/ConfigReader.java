@@ -21,6 +21,6 @@ public class ConfigReader {
     }
 
     public String getBaseUrl () {
-        return properties.getProperty("baseUrl");
+        return properties.getProperty("BASEURL");
     }
 }

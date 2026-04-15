@@ -10,7 +10,7 @@ import com.test.automationexercise.utils.ConfigReader;
 public class BaseTest {
 
     protected WebDriver driver;
-    ConfigReader config = new ConfigReader();
+    private ConfigReader config = new ConfigReader();
 
     @BeforeEach
     public void setUp() {
