@@ -32,10 +32,10 @@ public class LoginPage extends BasePage {
     }
 
     public String getEmailExistMessage() {
-        return wait.untilVisible(emailExistMessage).getText();
+        return extractText(emailExistMessage);
     }
 
     public String getWrongCredentialsMessage() {
-        return wait.untilVisible(wrongCredentialsMessage).getText();
+        return extractText(wrongCredentialsMessage);
     }
 }

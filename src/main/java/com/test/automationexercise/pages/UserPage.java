@@ -7,6 +7,10 @@ import org.openqa.selenium.WebDriver;
 public class UserPage extends BasePage {
 
     private By loggedInText = By.xpath("//a[contains(text(),' Logged in as ')]");
+    private By productsButton = By.xpath("//a[contains(text(), 'Products')]");
+    private By iFrame = By.xpath("//iframe[contains(@id, 'aswift')]");
+    private By closePopUpButton = By.id("dismiss-button-element");
+    private By cartButton = By.xpath("//a[contains(text(), 'Cart')]");
 
     public UserPage(WebDriver driver) {
         super(driver);
@@ -14,5 +18,14 @@ public class UserPage extends BasePage {
 
     public String getLoggedInText() {
         return wait.untilVisible(loggedInText).getText();
+    }
+
+    public void goToProductsTab() {
+        clickElement(productsButton);
+        closePopUpIfVisible(iFrame, closePopUpButton);
+    }
+
+    public void goToCartTab() {
+        clickElement(cartButton);
     }
 }

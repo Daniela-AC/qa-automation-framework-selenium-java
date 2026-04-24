@@ -25,7 +25,7 @@ public class BaseTest {
 
     private ChromeOptions getChromeOptions() {
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--start-maximized", "--incognito");
+        options.addArguments("--start-maximized", "--incognito", "--disable-popup-blocking");
         return options;
     }
 }

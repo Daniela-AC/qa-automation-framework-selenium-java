@@ -13,6 +13,6 @@ public class AccountCreatedPage extends BasePage {
     }
 
     public String getAccountCreatedMessage() {
-        return wait.untilVisible(accountCreatedTitle).getText();
+        return extractText(accountCreatedTitle);
     }
 }
