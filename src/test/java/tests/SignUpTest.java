@@ -33,9 +33,11 @@ public class SignUpTest extends BaseTest {
 
         homePage.goToLoginPage();
         login.startSigningUp(userData.firstName, userData.email);
+
         informationPage.fillInAccountInformation(userData);
         informationPage.fillInAddressInformation(userData);
         informationPage.clickCreateAccountButton();
+
         Assertions.assertEquals("ACCOUNT CREATED!", accountCreatedPage.getAccountCreatedMessage());
     }
 

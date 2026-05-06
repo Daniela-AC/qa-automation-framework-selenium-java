@@ -67,4 +67,9 @@ public class BasePage {
     protected String extractText(By locator) {
         return wait.untilVisible(locator).getText();
     }
+
+    protected void acceptAlert() {
+        wait.untilAlertIsPresent();
+        driver.switchTo().alert().accept();
+    }
 }

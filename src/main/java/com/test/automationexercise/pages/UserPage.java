@@ -11,6 +11,7 @@ public class UserPage extends BasePage {
     private By iFrame = By.xpath("//iframe[contains(@id, 'aswift')]");
     private By closePopUpButton = By.id("dismiss-button-element");
     private By cartButton = By.xpath("//a[contains(text(), 'Cart')]");
+    private By contactButton = By.xpath("//a[contains(text(), 'Contact us')]");
 
     public UserPage(WebDriver driver) {
         super(driver);
@@ -27,5 +28,9 @@ public class UserPage extends BasePage {
 
     public void goToCartTab() {
         clickElement(cartButton);
+    }
+
+    public void goToContactTab() {
+        clickElement(contactButton);
     }
 }

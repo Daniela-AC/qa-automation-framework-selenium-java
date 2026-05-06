@@ -38,6 +38,7 @@ public class PurchaseTest extends BaseTest {
         homePage.goToLoginPage();
         loginPage.logIn(TestCredentials.VALID_EMAIL, TestCredentials.CORRECT_PASSWORD);
         userPage.goToProductsTab();
+
         productsPage.addProductToTheCart();
         userPage.goToCartTab();
         cartPage.goToCheckoutPage();
